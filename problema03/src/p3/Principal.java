@@ -5,13 +5,13 @@
  */
 package p3;
 
-import p1.CalculadoraMatricula;
 import p1.MatriculaCampamento;
 import p1.MatriculaColegio;
 import p1.MatriculaEscuela;
 import p1.MatriculaJardin;
 import p1.MatriculaMaternal;
 import p2.TipoMatricula;
+import p1.CalcularMatricula;
 public class Principal {
     public static void main(String[] args) {
         TipoMatricula tipos = new TipoMatricula();
@@ -22,8 +22,8 @@ public class Principal {
         MatriculaColegio mcolegio = new MatriculaColegio();
         mcolegio.establecerTarifa();
 
-        tipos.establecerMatriculaCampamento((CalculadoraMatricula) mcamp);
-        tipos.establecerMatriculaColegio((CalculadoraMatricula) mcolegio);
+        tipos.establecerMatriculaCampamento((CalcularMatricula) mcamp);
+        tipos.establecerMatriculaColegio((CalcularMatricula) mcolegio);
         tipos.establecerPromedioTarifas();
 
         System.out.printf("Promedio de tarifas: %.2f\n", tipos.obtenerPromedioTarifas());

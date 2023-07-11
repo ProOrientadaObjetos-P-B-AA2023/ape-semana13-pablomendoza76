@@ -8,7 +8,7 @@ package p1;
  *
  * @author Usuario iTC
  */
-public interface CalculadoraMatricula {
+public interface CalcularMatricula {
     double calcularTarifaMatricula();
 }
 

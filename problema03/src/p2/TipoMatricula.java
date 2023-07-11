@@ -5,27 +5,27 @@
  */
 package p2;
 
-import p1.CalculadoraMatricula;
 import p1.MatriculaCampamento;
 import p1.MatriculaColegio;
+import p1.CalcularMatricula;
 public class TipoMatricula {
     private double promedioMatriculas;
-    private CalculadoraMatricula campamento;
-    private CalculadoraMatricula colegio;
+    private CalcularMatricula campamento;
+    private CalcularMatricula colegio;
 
-    public void establecerMatriculaCampamento(CalculadoraMatricula c) {
+    public void establecerMatriculaCampamento(CalcularMatricula c) {
         campamento = c;
     }
 
-    public void establecerMatriculaColegio(CalculadoraMatricula c) {
+    public void establecerMatriculaColegio(CalcularMatricula c) {
         colegio = c;
     }
 
-    public CalculadoraMatricula obtenerMatriculaCampamento() {
+    public CalcularMatricula obtenerMatriculaCampamento() {
         return campamento;
     }
 
-    public CalculadoraMatricula obtenerMatriculaColegio() {
+    public CalcularMatricula obtenerMatriculaColegio() {
         return colegio;
     }
 

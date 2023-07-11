@@ -5,7 +5,7 @@
  */
 package p1;
 
-public class MatriculaColegio implements CalculadoraMatricula {
+public class MatriculaColegio implements CalcularMatricula {
     private double tarifa;
 
     public void establecerTarifa() {
