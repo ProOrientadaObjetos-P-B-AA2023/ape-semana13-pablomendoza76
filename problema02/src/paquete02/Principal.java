@@ -25,8 +25,6 @@ public class Principal {
 
         MarcasVendidas marcas = new MarcasVendidas();
         ArrayList<String> marcasVendidas = marcas.obtenerMarcasVendidas(tvs);
-
-        System.out.println("-----------------");
         System.out.printf("Precio total: %.2f\n", precioTotal);
         System.out.println("Marcas vendidas:");
         for (String marca : marcasVendidas) {

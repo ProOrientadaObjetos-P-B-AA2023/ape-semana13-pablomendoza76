@@ -67,7 +67,5 @@ public class Persona {
     public void setCiudad(Ciudad ciudad) {
         this.ciudad = ciudad;
     }
-    
-    // Otros métodos relevantes, si los hay
 }
 

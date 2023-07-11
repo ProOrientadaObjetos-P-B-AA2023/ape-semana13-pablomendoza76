@@ -7,7 +7,7 @@ package paquete002;
 /**
  *
  * @author reroes
- */;
+ */
 public class Ciudad {
     private String nombreCiudad;
 
