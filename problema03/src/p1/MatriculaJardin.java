@@ -5,20 +5,21 @@
  */
 package p1;
 
-/**
- *
- * @author reroes
- */
-public class MatriculaJardin {
+public class MatriculaJardin implements CalculadoraMatricula {
     private double tarifa;
-    
-        
-    public void establecerTarifa(){
+
+    public void establecerTarifa() {
         // tarifa = costo desayunos + costo libros + costo paseos
         tarifa = 50.2 + 140.2 + 40;
     }
-        
-    public double obtenerTarifa(){
+
+    public double obtenerTarifa() {
         return tarifa;
     }
+
+    @Override
+    public double calcularTarifaMatricula() {
+        return obtenerTarifa();
+    }
 }
+

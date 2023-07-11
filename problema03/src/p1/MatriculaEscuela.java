@@ -5,20 +5,21 @@
  */
 package p1;
 
-/**
- *
- * @author reroes
- */
-public class MatriculaEscuela {
+public class MatriculaEscuela implements CalculadoraMatricula {
     private double tarifa;
-    
-    public void establecerTarifa(){
-        // tarifa = costo libros + costo deportes + costo folletos + 
-        //          costo uniformes
+
+    public void establecerTarifa() {
+        // tarifa = costo libros + costo deportes + costo folletos + costo uniformes
         tarifa = 50.2 + 40.2 + 140.2 + 200.4;
     }
-        
-    public double obtenerTarifa(){
+
+    public double obtenerTarifa() {
         return tarifa;
     }
+
+    @Override
+    public double calcularTarifaMatricula() {
+        return obtenerTarifa();
+    }
 }
+

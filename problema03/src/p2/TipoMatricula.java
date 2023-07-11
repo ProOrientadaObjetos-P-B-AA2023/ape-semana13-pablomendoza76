@@ -5,47 +5,37 @@
  */
 package p2;
 
+import p1.CalculadoraMatricula;
 import p1.MatriculaCampamento;
 import p1.MatriculaColegio;
-
-/**
- *
- * @author reroes
- */
 public class TipoMatricula {
     private double promedioMatriculas;
-    private MatriculaCampamento campamento;
-    private MatriculaColegio colegio;
-    // private MatriculaEscuela escuela;
-    // private MatriculaJardin jardin;
-    // private MatriculaMaternal maternal;
-    // private MatriculaMaternal maternal2;
-    
-    public void establecerMatriculaCampamento(MatriculaCampamento c){
+    private CalculadoraMatricula campamento;
+    private CalculadoraMatricula colegio;
+
+    public void establecerMatriculaCampamento(CalculadoraMatricula c) {
         campamento = c;
     }
-    
-    public void establecerMatriculaColegio(MatriculaColegio c){
+
+    public void establecerMatriculaColegio(CalculadoraMatricula c) {
         colegio = c;
     }
-    
-    public MatriculaCampamento obtenerMatriculaCampamento(){
+
+    public CalculadoraMatricula obtenerMatriculaCampamento() {
         return campamento;
     }
-    
-    public MatriculaColegio obtenerMatriculaColegio(){
+
+    public CalculadoraMatricula obtenerMatriculaColegio() {
         return colegio;
     }
-    
-    public void establecerPromedioTarifas(){
-        promedioMatriculas = (obtenerMatriculaCampamento().obtenerTarifa() + 
-                obtenerMatriculaColegio().obtenerTarifa())/2;
-        
+
+    public void establecerPromedioTarifas() {
+        promedioMatriculas = (obtenerMatriculaCampamento().calcularTarifaMatricula()
+                + obtenerMatriculaColegio().calcularTarifaMatricula()) / 2;
     }
-    
-    public double obtenerPromedioTarifas(){
+
+    public double obtenerPromedioTarifas() {
         return promedioMatriculas;
     }
-    
-    
 }
+

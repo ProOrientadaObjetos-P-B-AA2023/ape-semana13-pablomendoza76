@@ -5,19 +5,20 @@
  */
 package p1;
 
-/**
- *
- * @author reroes
- */
-public class MatriculaCampamento {
+public class MatriculaCampamento implements CalculadoraMatricula {
     private double tarifa;
-    
-    public void establecerTarifa(){
+
+    public void establecerTarifa() {
         // tarifa = costo transporte + costo comida + costo instructores
         tarifa = 100.2 + 30.2 + 90.2;
     }
-        
-    public double obtenerTarifa(){
+
+    public double obtenerTarifa() {
         return tarifa;
+    }
+
+    @Override
+    public double calcularTarifaMatricula() {
+        return obtenerTarifa();
     }
 }

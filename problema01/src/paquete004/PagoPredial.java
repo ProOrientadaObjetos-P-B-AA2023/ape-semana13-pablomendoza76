@@ -4,18 +4,18 @@
  */
 package paquete004;
 
-import paquete001.Persona;
-import paquete002.Propiedad;
+public class PagoPredial extends Pago {
+    private double valorPropiedad;
+    private double porcentajeDescuento;
 
-/**
- *
- * @author reroes
- */
-public class PagoPredial {
-    public double calcularPago(){
-        double valorPropiedad = 56000;
-        double porcentaje = 10;
-        double pago = valorPropiedad - ((valorPropiedad*porcentaje)/100);
-        return pago;
+    public PagoPredial(double valorPropiedad, double porcentajeDescuento) {
+        super(0); // No se utiliza el costo en el constructor de PagoPredial
+        this.valorPropiedad = valorPropiedad;
+        this.porcentajeDescuento = porcentajeDescuento;
+    }
+
+    @Override
+    public double calcularPago() {
+        return valorPropiedad - ((valorPropiedad * porcentajeDescuento) / 100);
     }
 }

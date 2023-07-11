@@ -10,13 +10,19 @@ import paquete001.Persona;
  *
  * @author reroes
  */
-public class PagoTelefonoConvencional {
-    
-    public double calcularPago(){
-        double tarifa = 6.20;
-        double minutosConsumidos = 100;
-        double costoMinuto = 0.2;
-        double pago = tarifa + (minutosConsumidos * costoMinuto);
-        return pago;
+public class PagoTelefonoConvencional extends Pago {
+    private double minutosConsumidos;
+    private double costoMinuto;
+
+    public PagoTelefonoConvencional(double costo, double minutosConsumidos) {
+        super(costo);
+        this.minutosConsumidos = minutosConsumidos;
+        this.costoMinuto = costoMinuto;
+    }
+
+    @Override
+    public double calcularPago() {
+        return getCosto() + (minutosConsumidos * costoMinuto);
     }
 }
+
